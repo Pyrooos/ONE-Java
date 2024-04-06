@@ -11,5 +11,11 @@ public class Main {
 
         double media = (8.2 + 6.0 + 9.0)/3;
         System.out.println("Media: " + media);
+        String sinopsis = """
+               Matrix es una parajoda
+               La mejor peliocula del fin del milenio
+               Fue lanzada en :
+                """ + fechaDeLanzamiento;
+        System.out.println(sinopsis);
     }
 }
