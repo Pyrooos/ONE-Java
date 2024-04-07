@@ -102,6 +102,12 @@ public class Main {
         int y2 = (int) x; // casting explícito
 
         System.out.println("y2 = " + y2);
+
+        String saludos = "Hola, mi nombre es ";
+        String nombre4= "Alicia ";
+        String continuacion = "y mi edad es ";
+        int edad2 = 17;
+        System.out.println(saludos + nombre4 + continuacion + edad2);
         
 
 
