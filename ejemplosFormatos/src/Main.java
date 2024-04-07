@@ -94,6 +94,15 @@ public class Main {
 
         System.out.println(mensaje3);
 
+        int x = 10;
+        double y = x; // casting implícito
+        System.out.println("y = " + y);
+
+        double x2 = 10.5;
+        int y2 = (int) x; // casting explícito
+
+        System.out.println("y2 = " + y2);
+        
 
 
 
