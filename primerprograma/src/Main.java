@@ -2,24 +2,23 @@
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Bienvenido(a) a Screen Match");
-        System.out.println("Pelicula: Matrix");
+        System.out.println("Welcome to Screen Match");
+        System.out.println("Movie: Matrix");
 
-        int fechaDeLanzamiento  = 1999;
-        boolean incluidoEnElPlan = true;
-        double notaDeLaPelicula = 8.2;
+        int dateOfRelease = 1999;
+        boolean includedInThePlan = true;
+        double ratingOfMovie = 8.2;
 
         double media = (8.2 + 6.0 + 9.0)/3;
         System.out.println("Media: " + media);
         String sinopsis = """
-               Matrix es una parajoda
-               La mejor peliocula del fin del milenio
-               Fue lanzada en :
-                """ + fechaDeLanzamiento;
+               Matrix is a paradox
+               The best movie of the end century
+               It was launched in: """ + dateOfRelease;
         System.out.println(sinopsis);
 
-        int clasificacion = (int) (media /2);
-        System.out.println("clasificacion = " + clasificacion);
+        int clasification = (int) (media /2);
+        System.out.println("clasification = " + clasification);
 
 
     }

@@ -15,7 +15,6 @@ public class Main {
         System.out.println(" Please enter the temperature in degrees celsius "  );
         String tempStr = scanner.nextLine();
         double temp = Double.parseDouble(tempStr);
-
         double result =  (temp*1.8)+32;
         int resultWithoutDecimals = (int) result;
         System.out.println("Converted temperature in Fahrenheit:   " + resultWithoutDecimals+ "°F");
