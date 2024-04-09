@@ -22,3 +22,4 @@ public class evaluations {
         }System.out.println("The average rating of the movie is:" + averageOfEvaluations / totalRatings);
     }
 }
+
