@@ -11,7 +11,7 @@ public class Loops {
 
 
         for (int i = 0; i < 3; i++){
-            System.out.println("Write the rating would you give to movie ");
+            System.out.println("What rating would you give to the movie? ");
             rating = keyboard.nextDouble();
             mediaRatings = mediaRatings + rating;
 

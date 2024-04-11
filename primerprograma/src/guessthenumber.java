@@ -33,6 +33,9 @@ public class guessthenumber {
                 System.out.println("Congratulations! You guessed the secret number.");
                 break;
             }
+            if (attemptsLimit == attemptsTry){
+                System.out.println("Sorry, you haven't more attempts, the secret number is "+secretNumber);
+            }
         }
     }
 }

@@ -13,12 +13,12 @@ public class Main {
         System.out.println("Media: " + media);
         String sinopsis = """
                Matrix is a paradox
-               The best movie of the end century
+               The best movie of the end of this century
                It was launched in: """ + dateOfRelease;
         System.out.println(sinopsis);
 
-        int clasification = (int) (media /2);
-        System.out.println("clasification = " + clasification);
+        int classification = (int) (media /2);
+        System.out.println("classification = " + classification);
 
 
     }
