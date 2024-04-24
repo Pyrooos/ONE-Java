@@ -1,8 +1,13 @@
+package com.aluracursos.screenmatch.principal;
+
 import com.aluracursos.screenmatch.calculations.RecommendationFilter;
 import com.aluracursos.screenmatch.calculations.TimeCalculator;
 import com.aluracursos.screenmatch.modelos.Episode;
 import com.aluracursos.screenmatch.modelos.Movie;
 import com.aluracursos.screenmatch.modelos.Serie;
+
+import java.util.ArrayList;
+
 /*
 This code is for explain topics like class,inheritance, mother class, polymorphism and interfaces. This example is a
 basic in object-oriented with Java, show how to do things respect these topics.
@@ -10,9 +15,7 @@ basic in object-oriented with Java, show how to do things respect these topics.
 */
 public class Principal {
     public static void main(String[] args) {
-        Movie myMovie = new Movie();
-        myMovie.setName("Enchanted"); ;
-        myMovie.setReleaseDate(2021);  ;
+        Movie myMovie = new Movie("Enchanted", 2021);
         myMovie.setDurationInMinutes(120); ;
         myMovie.setIncludedInThePlan(true);
 
@@ -27,18 +30,14 @@ public class Principal {
 
 
 
-        Serie fallout = new Serie();
-        fallout.setName("Fallout");
-        fallout.setReleaseDate(2024);
+        Serie fallout = new Serie("Fallout",2024);
         fallout.setTemps(1);
         fallout.setMinutesPerEpisode(50);
         fallout.setEpisodesPerSeason(10);
         fallout.showTechnicalSpecifications();
         System.out.println(fallout.getDurationInMinutes());
 
-        Movie otherMovie = new Movie();
-        otherMovie.setName("Matrix");
-        otherMovie.setReleaseDate(1998);
+        Movie otherMovie = new Movie("Matrix",1998);
         otherMovie.setDurationInMinutes(180);
 
         TimeCalculator calculator = new TimeCalculator();
@@ -56,6 +55,23 @@ public class Principal {
         episode.setSerie(fallout);
         episode.setTotalViews(50);
         recommendationFilter.filter(episode);
+
+        var favoriteFilmOfCris = new Movie("Harry Potter",2000);
+        favoriteFilmOfCris.setDurationInMinutes(120);
+
+        ArrayList<Movie> movieList = new ArrayList<>();
+        movieList.add(favoriteFilmOfCris);
+        movieList.add(otherMovie);
+        movieList.add(myMovie);
+
+        System.out.println("List size: "+ movieList.size());
+        System.out.println("The first movie is: " + movieList.get(0).getName());
+
+        System.out.println(movieList.toString());
+
+        System.out.println("List of movies "+ movieList.get(0).toString());
+
+
 
 
 
