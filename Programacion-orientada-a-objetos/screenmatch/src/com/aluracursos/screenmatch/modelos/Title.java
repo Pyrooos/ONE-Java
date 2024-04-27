@@ -1,8 +1,14 @@
 package com.aluracursos.screenmatch.modelos;
 
+import com.aluracursos.screenmatch.exception.ConversionErrorInDurationException;
+import com.google.gson.annotations.SerializedName;
+
 public class Title implements Comparable<Title>{
+
     private String name;
+
     private int durationInMinutes;
+
     private int releaseDate;
     private boolean includedInThePlan;
 
@@ -12,6 +18,15 @@ public class Title implements Comparable<Title>{
     public Title(String name, int releaseDate) {
         this.name = name;
         this.releaseDate = releaseDate;
+    }
+
+    public Title(TitleOmdb myTitleOmdb) {
+        this.name = myTitleOmdb.title();
+        this.releaseDate = Integer.valueOf(myTitleOmdb.year());
+        if(myTitleOmdb.runtime().contains("N/A")){
+            throw new ConversionErrorInDurationException("It's not possible to convert because it doesn't contain data");
+        }
+        this.durationInMinutes = Integer.valueOf(myTitleOmdb.runtime().substring(0,3).replace(" ","" ));
     }
 
     public String getName() {
@@ -67,5 +82,14 @@ public class Title implements Comparable<Title>{
     @Override
     public int compareTo(Title otherTitle) {
         return this.getName().compareTo(otherTitle.getName());
+    }
+
+    @Override
+    public String toString() {
+        return "(Name=" + name +
+                ", Release Date =" + releaseDate +
+                ", Duration= " + durationInMinutes+")";
+
+
     }
 }

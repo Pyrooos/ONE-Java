@@ -1,4 +1,4 @@
-package com.aluracursos.screenmatch.principal;
+package com.aluracursos.screenmatch.main;
 
 import com.aluracursos.screenmatch.modelos.Movie;
 import com.aluracursos.screenmatch.modelos.Serie;
@@ -6,7 +6,7 @@ import com.aluracursos.screenmatch.modelos.Title;
 
 import java.util.*;
 
-public class PrincipalWithList {
+public class MainWithList {
     public static void main(String[] args) {
 
         Movie myMovie = new Movie("Enchanted", 2021);

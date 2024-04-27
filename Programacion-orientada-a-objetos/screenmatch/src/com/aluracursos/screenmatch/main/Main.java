@@ -1,4 +1,4 @@
-package com.aluracursos.screenmatch.principal;
+package com.aluracursos.screenmatch.main;
 
 import com.aluracursos.screenmatch.calculations.RecommendationFilter;
 import com.aluracursos.screenmatch.calculations.TimeCalculator;
@@ -13,7 +13,7 @@ This code is for explain topics like class,inheritance, mother class, polymorphi
 basic in object-oriented with Java, show how to do things respect these topics.
                                       o showing how to work with these topics
 */
-public class Principal {
+public class Main {
     public static void main(String[] args) {
         Movie myMovie = new Movie("Enchanted", 2021);
         myMovie.setDurationInMinutes(120); ;
